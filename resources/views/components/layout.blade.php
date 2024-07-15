@@ -12,18 +12,15 @@
             Loker Subang
         @endisset
     </title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="/js/alpine.js"></script>
+    <script src="{{ asset('assets/ckeditor-standard/ckeditor.js') }}"></script>
 </head>
 
 <body class="h-full">
-
     <div class="min-h-full">
         <x-navbar />
-
-
-
         <main class="mt-16">
             @isset($header)
                 <header class="bg-white shadow ">
@@ -36,10 +33,24 @@
                 {{ $slot }}
             </div>
         </main>
-
         <x-footer />
     </div>
+    <script>
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+    </script>
 
+    <script>
+        var customOptions = Object.assign({}, options, {
+            versionCheck: false
+        });
+        CKEDITOR.replace('editor1', customOptions);
+    </script>
 </body>
+
 
 </html>

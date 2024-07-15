@@ -53,8 +53,12 @@
                                 role="menuitem" tabindex="-1" id="user-menu-item-0">Posts</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                 tabindex="-1" id="user-menu-item-1">Pengaturan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1" id="user-menu-item-2">Logout</a>
+
+                            <form action="{{ route('logout') }}" method="post"
+                                class="block px-4 py-2 text-sm text-gray-700 cursor-pointer">
+                                @csrf
+                                <button type="submit">Logout</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -115,8 +119,14 @@
                     Posts</a>
                 <a href="#"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Pengaturan</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Logout</a>
+                <form action="{{ route('logout') }}" method="post"
+                    class="block rounded-md px-3 py-2 text-base cursor-pointer font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+
+                {{-- <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Logout</a> --}}
             </div>
         </div>
     </div>
