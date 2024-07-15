@@ -1,4 +1,4 @@
-<x-auth>
+<x-auth title="Login Account">
     <div
         class="w-full max-w-sm p-8 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
         <img src="/img/logo.png" alt="" class="mb-3" width="60">

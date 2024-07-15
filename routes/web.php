@@ -5,10 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Controllers\HomeController::class)->name('home');
+Route::view('contact', 'contact');
+Route::view('about', 'about');
 
 
 Route::middleware('auth')->group(function () {
-    // POSTS
     Route::resource('/post', Controllers\PostController::class);
     Route::post('/logout', [Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 });
