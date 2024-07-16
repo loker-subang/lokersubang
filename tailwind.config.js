@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
-    content: ["./resources/**/*.blade.php", "./node_modules/flowbite/**/*.js"],
+    content: [
+        "./resources/**/*.blade.php",
+        "./node_modules/flowbite/**/*.js",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+    ],
     theme: {
         extend: {
             colors: {
