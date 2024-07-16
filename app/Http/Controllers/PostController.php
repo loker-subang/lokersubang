@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Models\City;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PostController extends Controller
 {
@@ -20,26 +21,14 @@ class PostController extends Controller
         return view('post._form', ['categories' => Category::get(), 'cities' => City::orderBy('name', 'asc')->get()]);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $attr = $request->validate([
-            'title' => 'required',
-            'user_id' => 'required',
-            'category_id' => 'required',
-            'city_id' => 'required',
-            'description' => 'required',
-            'body' => 'required',
-            'company' => 'required',
-            'image' => 'required|image'
-        ]);
-
-
-
+        $attr = $request->validated();
         if ($request->file('image')) {
             $attr['image'] = $request->file('image')->store('image');
         }
-
         Post::create($attr);
+        Alert::success('Success', 'Post Baru berhasil di tambahkan !');
         return to_route('post.index');
     }
 }

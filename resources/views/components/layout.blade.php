@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="/js/alpine.js"></script>
     <script src="{{ asset('assets/ckeditor-standard/ckeditor.js') }}"></script>
+
 </head>
 
 <body class="h-full">
@@ -50,6 +51,7 @@
         });
         CKEDITOR.replace('editor1', customOptions);
     </script>
+    @include('sweetalert::alert')
 </body>
 
 

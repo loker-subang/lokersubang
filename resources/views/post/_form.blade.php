@@ -57,19 +57,25 @@
                 <div class="mb-5 group">
                     <label for="category" name="category_id"
                         class="block mb-2 text-sm text-gray-500 dark:text-white">Kategori</label>
-                    <select id="category"
+                    <select id="category" name="category_id"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="">-Pilih-</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}"> {{ $category->name }}</option>
                         @endforeach
                     </select>
+                    @error('category_id')
+                        <span class="text-red-700 text-sm"> Kategori harus di Pilih</span>
+                    @enderror
                 </div>
                 <div class="mb-5 group">
-                    <label class="block mb-2 text-sm text-gray-500 dark:text-white" for="image">Image</label>
+                    <label class="block mb-2 text-sm text-gray-500 dark:text-white" for="image">Gambar</label>
                     <input name="image"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                         id="image" type="file">
+                    @error('image')
+                        <span class="text-red-700 text-sm"> Gambar harus di Pilih</span>
+                    @enderror
                 </div>
             </div>
         </div>
