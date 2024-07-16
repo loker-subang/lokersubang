@@ -18,8 +18,6 @@
                         <x-navbar.link href="#">Pelatihan</x-navbar.link>
                         <x-navbar.link href="#">Magang</x-navbar.link>
                         <x-navbar.link href="#">Informasi</x-navbar.link>
-                        <x-navbar.link href="#">Contact</x-navbar.link>
-                        <x-navbar.link href="#">About</x-navbar.link>
                     </div>
                 </div>
             </div>

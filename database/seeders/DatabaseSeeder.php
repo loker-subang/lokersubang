@@ -29,17 +29,17 @@ class DatabaseSeeder extends Seeder
         }
 
         $city = [
-            ['city' => "Kota Bekasi", 'salary' => ' 5343430'],
-            ['city' => "Karawang", 'salary' => ' 5257834 '],
-            ['city' => "Bekasi", 'salary' => '5219263'],
-            ['city' => "Purwakarta", 'salary' => ' 4499768'],
-            ['city' => "Subang", 'salary' => ' 3294485'],
-            ['city' => "Indramayu", 'salary' => ' 2623697'],
-            ['city' => "Majalengka", 'salary' => ' 2257871'],
-            ['city' => "Cirebon", 'salary' => '2533038'],
-            ['city' => "Bandung", 'salary' => '4209309'],
-            ['city' => "Bandung Barat", 'salary' => '3508677'],
-            ['city' => "Bogor", 'salary' => '4813988']
+            ['name' => "Kota Bekasi", 'salary' => ' 5343430'],
+            ['name' => "Karawang", 'salary' => ' 5257834 '],
+            ['name' => "Bekasi", 'salary' => '5219263'],
+            ['name' => "Purwakarta", 'salary' => ' 4499768'],
+            ['name' => "Subang", 'salary' => ' 3294485'],
+            ['name' => "Indramayu", 'salary' => ' 2623697'],
+            ['name' => "Majalengka", 'salary' => ' 2257871'],
+            ['name' => "Cirebon", 'salary' => '2533038'],
+            ['name' => "Bandung", 'salary' => '4209309'],
+            ['name' => "Bandung Barat", 'salary' => '3508677'],
+            ['name' => "Bogor", 'salary' => '4813988']
         ];
 
         foreach ($city as $c) {

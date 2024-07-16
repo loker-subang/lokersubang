@@ -17,6 +17,29 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('post._form', ['categories' => Category::get(), 'cities' => City::get()]);
+        return view('post._form', ['categories' => Category::get(), 'cities' => City::orderBy('name', 'asc')->get()]);
+    }
+
+    public function store(Request $request)
+    {
+        $attr = $request->validate([
+            'title' => 'required',
+            'user_id' => 'required',
+            'category_id' => 'required',
+            'city_id' => 'required',
+            'description' => 'required',
+            'body' => 'required',
+            'company' => 'required',
+            'image' => 'required|image'
+        ]);
+
+
+
+        if ($request->file('image')) {
+            $attr['image'] = $request->file('image')->store('image');
+        }
+
+        Post::create($attr);
+        return to_route('post.index');
     }
 }
