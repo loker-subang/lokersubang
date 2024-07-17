@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PostController extends Controller
@@ -29,6 +30,15 @@ class PostController extends Controller
         }
         Post::create($attr);
         Alert::success('Success', 'Post Baru berhasil di tambahkan !');
+        return to_route('post.index');
+    }
+
+    public function destroy(Request $request, $id)
+    {
+        $image = Post::find($id)->first();
+        Storage::delete($image->image);
+        Post::find($id)->delete();
+        Alert::success('Sukses', 'Data kelas berhasil di Hapus');
         return to_route('post.index');
     }
 }
