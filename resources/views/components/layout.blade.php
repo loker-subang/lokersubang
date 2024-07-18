@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         @isset($title)
-            {{ $title }} / Loker Subang
+            {{ $title }}
         @else
             Loker Subang
         @endisset
@@ -36,6 +36,8 @@
         </main>
         <x-footer />
     </div>
+
+    {{-- Laravel Filemanager --}}
     <script>
         var options = {
             filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -45,12 +47,29 @@
         };
     </script>
 
+    {{-- CKEDITOR --}}
     <script>
         var customOptions = Object.assign({}, options, {
             versionCheck: false
         });
         CKEDITOR.replace('editor1', customOptions);
     </script>
+
+    {{-- Image Preview --}}
+    <script>
+        document.getElementById("image").addEventListener("change", function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var imgElement = document.getElementById("preview");
+                imgElement.src = e.target.result;
+                imgElement.style.display = "inline";
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+
+    {{-- Sweetalert --}}
     @include('sweetalert::alert')
 </body>
 

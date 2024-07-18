@@ -35,7 +35,7 @@
                             {{ $post->created_at->format('d M Y') }}
                         </td>
                         <td class="px-6 py-4 text-right flex float-end gap-2">
-                            <a href="#"
+                            <a href="{{ route('post.edit', $post->id) }}"
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                             |
                             <form action="{{ route('post.destroy', $post->id) }}" method="post">

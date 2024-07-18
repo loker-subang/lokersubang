@@ -14,10 +14,10 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <x-navbar.link href="/">Home</x-navbar.link>
-                        <x-navbar.link href="#">Lowongan Kerja</x-navbar.link>
-                        <x-navbar.link href="#">Pelatihan</x-navbar.link>
-                        <x-navbar.link href="#">Magang</x-navbar.link>
-                        <x-navbar.link href="#">Informasi</x-navbar.link>
+                        <x-navbar.link href="/kategori/lowongan-kerja">Lowongan Kerja</x-navbar.link>
+                        <x-navbar.link href="/kategori/pelatihan">Pelatihan</x-navbar.link>
+                        <x-navbar.link href="/kategori/magang">Magang</x-navbar.link>
+                        <x-navbar.link href="/kategori/informasi">Informasi</x-navbar.link>
                     </div>
                 </div>
             </div>
@@ -89,12 +89,12 @@
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <x-navbar.dropdown href="{{ route('home') }}">Home</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">Lowongan Kerja</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">Pelatihan</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">Magang</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">Informasi</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">Contact</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">About</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/lowongan-kerja">Lowongan Kerja</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/pelatihan">Pelatihan</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/magang">Magang</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/informasi">Informasi</x-navbar.dropdown>
+            {{-- <x-navbar.dropdown href="/contact">Contact</x-navbar.dropdown>
+            <x-navbar.dropdown href="#">About</x-navbar.dropdown> --}}
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">

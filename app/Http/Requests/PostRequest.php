@@ -29,7 +29,7 @@ class PostRequest extends FormRequest
             'description' => 'required',
             'body' => 'required',
             'company' => 'required',
-            'image' => 'required|image'
+            'image' => 'required'
         ];
     }
 }
