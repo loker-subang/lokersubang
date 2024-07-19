@@ -22,18 +22,22 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 });
 
-// Category
-Route::get('/kategori/{category:slug}', function (Category $category) {
-    return view('posts', ['posts' => $category->posts->load('category', 'users'), 'title' => $category->name]);
-});
-Route::get('/user/{user:slug}', function (User $user) {
-    return view('posts', ['posts' => $user->posts->load('category', 'users'), 'title' => $user->name]);
-});
+
 
 // Show Posts
-Route::get('/{post:slug}', function (Post $post) {
-    return view('post', ['post' => $post->first()]);
+Route::get('/{post:slug}.html', function (Post $post) {
+    return view('post', ['post' => $post]);
 });
+
+
+Route::get('/kategori/{category:slug}', function (Category $category) {
+    return view('posts', ['posts' => $category->posts->load(['category', 'user']), 'title' => $category->name]);
+});
+Route::get('/user/{user:slug}', function (User $user) {
+    return view('posts', ['posts' => $user->posts->load(['category', 'user']), 'title' => $user->name]);
+});
+
+
 
 
 Route::view('contact', 'contact');

@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $category = [
-            ['name' => 'Lowongan Kerja', 'slug' => 'lowongan-kerja'],
-            ['name' => 'Magang', 'slug' => 'magang'],
-            ['name' => 'Pelatihan', 'slug' => 'pelatihan'],
-            ['name' => 'Informasi', 'slug' => 'informasi'],
+            ['name' => 'Lowongan Kerja', 'slug' => 'lowongan-kerja', 'color' => 'yellow'],
+            ['name' => 'Magang', 'slug' => 'magang', 'color' => 'blue'],
+            ['name' => 'Pelatihan', 'slug' => 'pelatihan', 'color' => 'green'],
+            ['name' => 'Informasi', 'slug' => 'informasi', 'color' => 'red'],
         ];
 
         foreach ($category as $categori) {
@@ -48,8 +48,8 @@ class DatabaseSeeder extends Seeder
 
 
         \App\Models\User::factory()->create([
-            'name' => 'Dadan Nurmaulana',
-            'email' => 'ddn@gmail.com',
+            'name' => 'Loker Subang',
+            'email' => 'admin@lokersubang.com',
         ]);
     }
 }

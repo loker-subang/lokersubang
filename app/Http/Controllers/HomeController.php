@@ -12,6 +12,6 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('posts', ['posts' => Post::with('category')->latest()->get()]);
+        return view('posts', ['posts' => Post::with(['user', 'category'])->latest()->get()]);
     }
 }
