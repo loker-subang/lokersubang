@@ -25,7 +25,7 @@
                     <h1
                         class="mb-3 mt-10 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
                         {{ $post->title }}</h1>
-                    <nav class="flex " aria-label="Breadcrumb">
+                    {{-- <nav class="flex" aria-label="Breadcrumb">
                         <ol class="inline-flex items-center space-x-2 md:space-x-2 rtl:space-x-reverse">
                             <li class="inline-flex items-center">
                                 <a href="{{ route('home') }}"
@@ -56,7 +56,7 @@
                                 </div>
                             </li>
                         </ol>
-                    </nav>
+                    </nav> --}}
 
                 </header>
                 <img src="/storage/{{ $post->image }}" alt="">

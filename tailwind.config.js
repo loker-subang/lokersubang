@@ -52,5 +52,12 @@ export default {
         require("@tailwindcss/typography"),
         require("flowbite-typography"),
     ],
-    safelist: ["bg-green-100", "bg-yellow-100", "bg-red-100", "bg-blue-100"],
+    safelist: [
+        "bg-green-100",
+        "bg-yellow-100",
+        "bg-red-100",
+        "bg-blue-100",
+        "shadow",
+        "rounded",
+    ],
 };

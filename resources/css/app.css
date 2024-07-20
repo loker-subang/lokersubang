@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alert {
+    @apply p-4 rounded shadow-lg bg-yellow-100;
+}

@@ -86,7 +86,7 @@ class PostController extends Controller
 
 
         Post::whereId($id)->update($attr);
-        Alert::success('Sukses', 'Data kelas berhasil di Update');
+        Alert::success('Sukses', 'Data post berhasil di Update');
         return to_route('post.index');
     }
 

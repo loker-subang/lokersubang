@@ -28,8 +28,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/{post:slug}.html', function (Post $post) {
     return view('post', ['post' => $post]);
 });
-
-
 Route::get('/kategori/{category:slug}', function (Category $category) {
     return view('posts', ['posts' => $category->posts->load(['category', 'user']), 'title' => $category->name]);
 });
