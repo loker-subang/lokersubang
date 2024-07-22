@@ -95,7 +95,7 @@ class PostController extends Controller
         $image = Post::find($id)->first();
         Storage::delete($image->image);
         Post::find($id)->delete();
-        Alert::success('Sukses', 'Data kelas berhasil di Hapus');
+        Alert::success('Sukses', 'Data post berhasil di Hapus');
         return to_route('post.index');
     }
 }

@@ -1,10 +1,7 @@
 <x-layout title="{{ $title ?? config('app.name') }}">
-    @isset($title)
-        <x-slot name="header">{{ $title }}</x-slot>
-    @endisset
     <section class=dark:bg-gray-900">
         <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
-            <x-jumbotron />
+            <x-jumbotron title="{{ $title ?? 'LOKER SUBANG' }}" />
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
                 @forelse ($posts as $post)
                     <x-post slugCategory="{{ $post->category->slug }}" slug="{{ $post->slug }}"

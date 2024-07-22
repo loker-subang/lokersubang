@@ -7,7 +7,7 @@
                         <a href="{{ route('home') }}">
                             <img class="w-9" src="/img/logo.png" alt="Your Company" class="bg-white">
                     </div>
-                    {{-- <span class="text-white font-bold text-2xl"> LOKER SUBANG</span> --}}
+                    {{-- <span class="text-white  text-2xl"> LOKER SUBANG</span> --}}
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -99,13 +99,11 @@
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
                 <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="">
+                    <img class="h-10 w-10 rounded-full" src="/img/user.png" alt="">
                 </div>
                 <div class="ml-3">
-                    <div class="text-base font-medium leading-none text-white">Dadan Nurmaulana</div>
-                    <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                    <div class="text-base font-medium leading-none text-white">{{ Auth::user()->name }}</div>
+                    <div class="text-sm font-medium leading-none text-gray-400 mt-2">{{ Auth::user()->email }}</div>
                 </div>
             </div>
             <div class="mt-3 space-y-1 px-2">
