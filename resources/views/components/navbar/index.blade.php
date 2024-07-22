@@ -44,12 +44,13 @@
                                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                 tabindex="-1">
                                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                    tabindex="-1" id="user-menu-item-0">Profil</a>
+                                {{-- <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                    id="user-menu-item-0">Profil</a> --}}
                                 <a href="{{ route('post.index') }}" class="block px-4 py-2 text-sm text-gray-700"
                                     role="menuitem" tabindex="-1" id="user-menu-item-0">Posts</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                    tabindex="-1" id="user-menu-item-1">Pengaturan</a>
+                                {{-- <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                    tabindex="-1" id="user-menu-item-1">Pengaturan</a> --}}
 
                                 <form action="{{ route('logout') }}" method="post"
                                     class="block px-4 py-2 text-sm text-gray-700 cursor-pointer">
@@ -93,37 +94,37 @@
             <x-navbar.dropdown href="/kategori/pelatihan">Pelatihan</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/magang">Magang</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/informasi">Informasi</x-navbar.dropdown>
-            {{-- <x-navbar.dropdown href="/contact">Contact</x-navbar.dropdown>
-            <x-navbar.dropdown href="#">About</x-navbar.dropdown> --}}
         </div>
-        <div class="border-t border-gray-700 pb-3 pt-4">
-            <div class="flex items-center px-5">
-                <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full" src="/img/user.png" alt="">
+        @auth
+            <div class="border-t border-gray-700 pb-3 pt-4">
+                <div class="flex items-center px-5">
+                    <div class="flex-shrink-0">
+                        <img class="h-10 w-10 rounded-full" src="/img/user.png" alt="">
+                    </div>
+                    <div class="ml-3">
+                        <div class="text-base font-medium leading-none text-white">{{ Auth::user()->name }}</div>
+                        <div class="text-sm font-medium leading-none text-gray-400 mt-2">{{ Auth::user()->email }}</div>
+                    </div>
                 </div>
-                <div class="ml-3">
-                    <div class="text-base font-medium leading-none text-white">{{ Auth::user()->name }}</div>
-                    <div class="text-sm font-medium leading-none text-gray-400 mt-2">{{ Auth::user()->email }}</div>
-                </div>
-            </div>
-            <div class="mt-3 space-y-1 px-2">
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
-                    Profil</a>
-                <a href="{{ route('post.index') }}"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
-                    Posts</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Pengaturan</a>
-                <form action="{{ route('logout') }}" method="post"
-                    class="block rounded-md px-3 py-2 text-base cursor-pointer font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
-                    @csrf
-                    <button type="submit">Logout</button>
-                </form>
+                <div class="mt-3 space-y-1 px-2">
+                    {{-- <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                        Profil</a> --}}
+                    <a href="{{ route('post.index') }}"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                        Posts</a>
+                    {{-- <a href="#"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Pengaturan</a> --}}
+                    <form action="{{ route('logout') }}" method="post"
+                        class="block rounded-md px-3 py-2 text-base cursor-pointer font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
 
-                {{-- <a href="#"
+                    {{-- <a href="#"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Logout</a> --}}
+                </div>
             </div>
-        </div>
+        @endauth
     </div>
 </nav>

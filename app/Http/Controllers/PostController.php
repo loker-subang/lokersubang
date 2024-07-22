@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PostRequest;
 use App\Models\City;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -14,9 +14,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('post.index', [
-            'posts' => Post::with('category')->latest()->paginate(10)
-        ]);
+        return view('post.index', ['posts' => Post::with('category')->latest()->paginate(10)->withQueryString()]);
     }
 
     public function create()
