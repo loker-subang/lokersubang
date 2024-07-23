@@ -7,7 +7,9 @@
         jawab
         pribadi masing-masing.</p>
 
-    <p>Jika Anda menemukan lowongan kerja yang mencurigakan, segera laporkan kepada admin untuk tindakan
+    <p>Jika Anda menemukan lowongan kerja yang mencurigakan, segera laporkan kepada admin melalui beberapa platform
+        media sosial untuk
+        tindakan
         lebih lanjut</p>
 
 </div>

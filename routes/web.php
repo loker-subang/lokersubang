@@ -4,14 +4,7 @@ use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
 use App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
-use UniSharp\LaravelFilemanager\Lfm;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\Auth\LoginController;
-
-
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
@@ -29,7 +22,6 @@ Route::get('/kategori/{category:slug}', function (Category $category) {
 Route::get('/user/{user:slug}', function (User $user) {
     return view('posts', ['posts' => $user->posts->load('category', 'user'), 'title' => $user->name]);
 });
-Route::view('contact', 'contact');
 Route::view('about', 'about');
 Route::get('login', [Controllers\Auth\LoginController::class, 'login'])->name('login');
 Route::post('login', [Controllers\Auth\LoginController::class, 'authenticate']);
@@ -38,3 +30,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('post', Controllers\PostController::class);
     Route::post('logout', [Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 });
+
+Route::get('sitemap.xml', Controllers\SitemapController::class);

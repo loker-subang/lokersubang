@@ -46,6 +46,10 @@
                     <p class="text-lg text-slate-500 font-semibold">Tidak ada postingan !</p>
                 @endforelse
             </div>
+
+            <div class="mt-3">
+                {{ $posts->links() }}
+            </div>
         </div>
     </section>
 </x-layout>

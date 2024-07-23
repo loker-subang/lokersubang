@@ -14,7 +14,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('post.index', ['posts' => Post::with('category')->filter(request('search'))->latest()->paginate(10)->withQueryString()]);
+        return view('post.index', ['posts' => Post::with('category')->filter(request('search'))->latest()->paginate(15)->withQueryString()]);
     }
 
     public function create()

@@ -1,14 +1,22 @@
 <x-layout title="{{ $post->title }}" desc="{{ $post->description }}" keyword="{{ $post->title }}"
     image="{{ $post->image }}">
 
-    @if ($post->category_id == 1)
-        <div class="alert mb-2" role="alert">
-            <marquee>
+    {{-- @if ($post->category_id == 1)
+        <div class="alert mb-2 flex" role="alert">
+            <div class="mx-auto">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white inline mb-1" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M18.458 3.11A1 1 0 0 1 19 4v16a1 1 0 0 1-1.581.814L12 16.944V7.056l5.419-3.87a1 1 0 0 1 1.039-.076ZM22 12c0 1.48-.804 2.773-2 3.465v-6.93c1.196.692 2 1.984 2 3.465ZM10 8H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6V8Zm0 9H5v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3Z"
+                        clip-rule="evenodd" />
+                </svg>
+
                 Tahapan seleksi
-                <strong> TIDAK DIPUNGUT BIAYA APAPUN !</strong>
-            </marquee>
+                <strong> TIDAK DIPUNGUT BIAYA !</strong>
+            </div>
         </div>
-    @endif
+    @endif --}}
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
         <div class="flex justify-between px-6 mx-auto max-w-screen-xl ">
             <article class="mx-auto w-full max-w-2xl format sm:format-base lg:format-lg format-blue dark:format-invert">

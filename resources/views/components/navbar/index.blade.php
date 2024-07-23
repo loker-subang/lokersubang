@@ -18,6 +18,7 @@
                         <x-navbar.link href="/kategori/pelatihan">Pelatihan</x-navbar.link>
                         <x-navbar.link href="/kategori/magang">Magang</x-navbar.link>
                         <x-navbar.link href="/kategori/informasi">Informasi</x-navbar.link>
+                        <x-navbar.link href="/about">About</x-navbar.link>
                     </div>
                 </div>
             </div>
@@ -94,6 +95,7 @@
             <x-navbar.dropdown href="/kategori/pelatihan">Pelatihan</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/magang">Magang</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/informasi">Informasi</x-navbar.dropdown>
+            <x-navbar.dropdown href="/about">About</x-navbar.dropdown>
         </div>
         @auth
             <div class="border-t border-gray-700 pb-3 pt-4">

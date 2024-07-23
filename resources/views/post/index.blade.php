@@ -32,9 +32,6 @@
             <x-table.thead>
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        No.
-                    </th>
-                    <th scope="col" class="px-6 py-3">
                         Judul
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -54,9 +51,6 @@
 
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $loop->iteration }}
-                        </th>
-                        <th class="px-6 py-4">
                             {{ $post->title }}
                         </th>
                         <td class="px-6 py-4">

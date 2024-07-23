@@ -82,40 +82,6 @@
         <x-footer />
     </div>
 
-    {{-- Laravel Filemanager --}}
-    {{-- <script>
-        var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-        };
-    </script> --}}
-
-    {{-- CKEDITOR --}}
-    {{-- <script>
-        var customOptions = Object.assign({}, options, {
-            versionCheck: false
-        });
-        CKEDITOR.replace('editor1', customOptions);
-    </script> --}}
-
-    {{-- Image Preview --}}
-    {{-- <script>
-        document.getElementById("image").addEventListener("change", function(event) {
-            var file = event.target.files[0];
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                var imgElement = document.getElementById("preview");
-                imgElement.src = e.target.result;
-                imgElement.style.display = "inline";
-            };
-            reader.readAsDataURL(file);
-        });
-    </script> --}}
-
-    {{-- Sweetalert --}}
-    {{-- @include('sweetalert::alert') --}}
 </body>
 
 
