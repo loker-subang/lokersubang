@@ -18,10 +18,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png">
     <script defer src="/js/alpine.js"></script>
-    {{-- <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script> --}}
-    <script type="text/javascript"
-        src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform"
-        async="async"></script>
+    <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
 
     {{-- TAG --}}
     <meta name="description"
@@ -83,25 +80,25 @@
     </div>
 
     {{-- Laravel Filemanager --}}
-    {{-- <script>
+    <script>
         var options = {
             filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
             filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
             filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
             filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
         };
-    </script> --}}
+    </script>
 
     {{-- CKEDITOR --}}
-    {{-- <script>
+    <script>
         var customOptions = Object.assign({}, options, {
             versionCheck: false
         });
         CKEDITOR.replace('editor1', customOptions);
-    </script> --}}
+    </script>
 
     {{-- Image Preview --}}
-    {{-- <script>
+    <script>
         document.getElementById("image").addEventListener("change", function(event) {
             var file = event.target.files[0];
             var reader = new FileReader();
@@ -112,10 +109,10 @@
             };
             reader.readAsDataURL(file);
         });
-    </script> --}}
+    </script>
 
     {{-- Sweetalert --}}
-    {{-- @include('sweetalert::alert') --}}
+    @include('sweetalert::alert')
 </body>
 
 

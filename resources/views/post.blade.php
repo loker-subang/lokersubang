@@ -72,6 +72,7 @@
             </article>
             <hr class="bg-blue-500">
         </div>
+        <div class="sharethis-inline-share-buttons mt-16"></div>
     </main>
 
 

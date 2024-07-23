@@ -23,7 +23,7 @@ Route::get('/{post:slug}.html', function (Post $post) {
     return view('post', ['post' => $post]);
 });
 Route::get('/kategori/{category:slug}', function (Category $category) {
-    $posts = $category->posts()->filter(request(['search']))->with('category', 'user')->paginate(9)->withQueryString();
+    $posts = $category->posts()->filter(request(['search']))->with('category', 'user')->latest()->paginate(9)->withQueryString();
     return view('posts', ['posts' => $posts, 'title' => $category->name]);
 });
 Route::get('/user/{user:slug}', function (User $user) {
