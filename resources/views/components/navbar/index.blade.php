@@ -5,7 +5,7 @@
                 <div class="flex-shrink-0 flex">
 
                     <a href="{{ route('home') }}">
-                        <img class="w-9" src="/img/lokersubang.png" alt="Loker Subang" class="bg-white">
+                        <img class="w-9" src="/img/lokersubang.png" alt="LOKER SUBANG" class="bg-white">
 
                         {{-- <span class="text-white  text-2xl"> LOKER SUBANG</span> --}}
                     </a>
