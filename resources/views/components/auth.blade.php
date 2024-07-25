@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex, nofollow" />
     <title>
         @isset($title)
-            {{ $title }} - LOKER SUBANG
+        {{ $title }} - LOKER SUBANG
         @else
-            LOKER SUBANG
+        LOKER SUBANG
         @endisset
     </title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
