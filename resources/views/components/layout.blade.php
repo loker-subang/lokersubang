@@ -22,6 +22,19 @@
     {{-- <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script> --}}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform" async="async"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW5D90Q7ZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HW5D90Q7ZF');
+    </script>
+
     {{-- TAG --}}
     <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
     <meta property="og:locale" content="id_ID" />
@@ -29,8 +42,8 @@
     <meta property="og:title" content="{{ $title ?? 'LOKER SUBANG' }}" />
     <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
     <meta name="keywords" content="{{ $keyword ?? 'loker subang 2024, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    {{-- <meta property="og:url" content="{{ URL::full() }}" /> --}}
+    <!-- <meta property="og:url" content="{{ url()->current() }}" /> -->
+    <meta property="og:url" content="{{ URL::full() }}" />
     <meta property="og:site_name" content="LOKER SUBANG" />
     <meta property="og:image" content="
     @isset($image)
@@ -47,8 +60,8 @@
     <meta name="twitter:data1" content="Loker Subang" />
     <meta name="twitter:label2" content="Estimasi waktu membaca" />
     <meta name="twitter:data2" content="2 menit" />
-    <link rel="canonical" href="{{ url()->current() }}">
-    {{-- <link rel="canonical" href="{{ URL::full() }}"> --}}
+    <!-- <link rel="canonical" href="{{ url()->current() }}"> -->
+    <link rel="canonical" href="{{ URL::full() }}">
 </head>
 
 <body class="h-full">

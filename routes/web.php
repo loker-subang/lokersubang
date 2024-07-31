@@ -23,6 +23,9 @@ Route::get('/user/{user:slug}', function (User $user) {
     return view('posts', ['posts' => $user->posts->load('category', 'user'), 'title' => $user->name]);
 });
 Route::view('about', 'about');
+Route::view('disclaimer', 'disclaimer');
+Route::view('faq', 'faq');
+Route::view('kontak', 'kontak');
 Route::get('login', [Controllers\Auth\LoginController::class, 'login'])->name('login');
 Route::post('login', [Controllers\Auth\LoginController::class, 'authenticate']);
 
