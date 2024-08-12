@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Loker Subang">
     <meta name="google-site-verification" content="2ga1mhc6hM_haMw4jHAKzdi7oghPndrlG2S9WJlE9Hw" />
-    <meta name="google-adsense-account" content="ca-pub-3504060649077932">
+
     <title>
         @isset($title)
         {{ $title }}
@@ -62,6 +62,8 @@
     <meta name="twitter:data2" content="2 menit" />
     <!-- <link rel="canonical" href="{{ url()->current() }}"> -->
     <link rel="canonical" href="{{ URL::full() }}">
+
+
 </head>
 
 <body class="h-full">

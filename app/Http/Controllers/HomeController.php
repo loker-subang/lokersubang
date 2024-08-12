@@ -13,6 +13,6 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         // dump(request('search'));
-        return view('posts', ['posts' => Post::with(['user', 'category'])->filter(request(['search']))->latest()->paginate(9)->withQueryString()]);
+        return view('posts', ['posts' => Post::with(['user', 'category'])->whereYear('created_at', '>=', 2023)->whereYear('created_at', '<=', 2024)->filter(request(['search']))->latest()->paginate(9)->withQueryString()]);
     }
 }

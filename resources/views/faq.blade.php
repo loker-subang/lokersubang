@@ -27,7 +27,7 @@
 
                 <h4>6. Apakah ada biaya untuk menggunakan LokerSubang.com?</h4>
 
-                <p>Mengakses dan mencari informasi lowongan kerja di LokerSubang.com sepenuhnya gratis. Namun, kami mungkin menawarkan layanan tambahan berbayar bagi perusahaan yang ingin menampilkan lowongan mereka dengan lebih menonjol.</p>
+                <p>Mengakses dan mencari informasi lowongan kerja di LokerSubang.com sepenuhnya gratis. </p>
 
                 <h4>7. Bagaimana cara menghubungi LokerSubang.com untuk pertanyaan lebih lanjut?</h4>
 

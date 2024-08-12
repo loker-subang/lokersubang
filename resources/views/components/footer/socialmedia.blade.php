@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center space-x-1">
+<div class="flex justify-center items-center space-x-1 text-sm">
     <a href="/kontak" data-tooltip-target="tooltip-kontak" class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
         Kontak
         <span class="sr-only">kontak</span>
