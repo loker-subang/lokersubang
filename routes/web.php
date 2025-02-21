@@ -16,7 +16,7 @@ Route::get('/{post:slug}.html', function (Post $post) {
     return view('post', ['post' => $post]);
 });
 Route::get('/kategori/{category:slug}', function (Category $category) {
-    $posts = $category->posts()->whereYear('created_at', '>=', 2023)->whereYear('created_at', '<=', 2024)->filter(request(['search']))->with('category', 'user')->latest()->paginate(9)->withQueryString();
+    $posts = $category->posts()->whereYear('created_at', '>=', 2023)->whereYear('created_at', '<=', 2025)->filter(request(['search']))->with('category', 'user')->latest()->paginate(9)->withQueryString();
     return view('posts', ['posts' => $posts, 'title' => $category->name]);
 });
 Route::get('/user/{user:slug}', function (User $user) {

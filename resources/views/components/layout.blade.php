@@ -2,12 +2,11 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
 
 <head>
+    <meta name="google-adsense-account" content="ca-pub-3504060649077932">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Loker Subang">
-    <meta name="google-site-verification" content="2ga1mhc6hM_haMw4jHAKzdi7oghPndrlG2S9WJlE9Hw" />
-
     <title>
         @isset($title)
         {{ $title }}
@@ -21,27 +20,13 @@
     <script defer src="/js/alpine.js"></script>
     {{-- <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script> --}}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform" async="async"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW5D90Q7ZF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-HW5D90Q7ZF');
-    </script>
-
     {{-- TAG --}}
-    <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
+    <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2025 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $title ?? 'LOKER SUBANG' }}" />
-    <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
-    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2024, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
+    <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2025 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
+    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2025, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
     <!-- <meta property="og:url" content="{{ url()->current() }}" /> -->
     <meta property="og:url" content="{{ URL::full() }}" />
     <meta property="og:site_name" content="LOKER SUBANG" />
@@ -82,6 +67,7 @@
             </header>
             @endisset
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 min-h-screen">
+
                 {{ $slot }}
             </div>
         </main>

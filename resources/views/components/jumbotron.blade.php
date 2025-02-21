@@ -2,7 +2,7 @@
     <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
         {{ $title }}
     </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Loker Subang adalah website informasi
+    <p class="font-light text-slate-500 sm:text-xl dark:text-gray-400">Loker Subang adalah website informasi
         lowongan kerja pertama di Subang. Website Loker Subang dibangun untuk memberikan informasi lowongan
         kerja subang dan sekitarnya</p>
     <form action="" class="mt-5">

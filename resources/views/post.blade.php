@@ -25,7 +25,7 @@
                             <img class="mr-4 w-16 h-16 rounded-full" src="/img/lokersubang.png" alt="Loker Subang">
                             <div>
                                 <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->user->name }}</a>
-                                <p class="text-base text-slate-900 dark:text-gray-400 mt-2">Donasi via <a href="https://saweria.co/lokersubang" class="p-1 bg-blue-700 rounded text-white hover:bg-blue-400 font-light">Saweria</a></p>
+                                <!-- <p class="text-base text-slate-900 dark:text-gray-400 mt-2">Donasi via <a href="https://saweria.co/lokersubang" class="p-1 bg-blue-700 rounded text-white hover:bg-blue-400 font-light">Saweria</a></p> -->
                                 <p class="text-base text-gray-500 dark:text-gray-400 mt-2"><time pubdate datetime="2022-02-08" title="February 8th, 2022">{{ $post->created_at->format('d M Y') }}</time></p>
                             </div>
                         </div>
@@ -62,6 +62,7 @@
                     </nav>
 
                 </header>
+
                 <img src="/storage/{{ $post->image }}" alt="{{ $post->title }}" loading="lazy">
                 {!! $post->body !!}
             </article>

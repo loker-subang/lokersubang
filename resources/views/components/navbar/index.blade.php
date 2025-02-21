@@ -4,8 +4,8 @@
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex">
                     <a href="{{ route('home') }}">
-                        <img class="w-9" src="/img/lokersubang.png" alt="LOKER SUBANG" class="bg-white">
-                        {{-- <span class="text-white  text-2xl"> LOKER SUBANG</span> --}}
+                        <img class="w-9" src="/img/lokersubang.webp" alt="LOKER SUBANG" class="bg-white">
+                        <!-- <span class="text-white  text-2xl"> LOKER SUBANG</span> -->
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -13,9 +13,11 @@
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <x-navbar.link href="/">Home</x-navbar.link>
                         <x-navbar.link href="/kategori/lowongan-kerja">Lowongan Kerja</x-navbar.link>
-                        <x-navbar.link href="/kategori/pelatihan">Pelatihan</x-navbar.link>
-                        <x-navbar.link href="/kategori/magang">Magang</x-navbar.link>
                         <x-navbar.link href="/kategori/informasi">Informasi</x-navbar.link>
+                        <x-navbar.link href="/kontak">Kontak</x-navbar.link>
+                        <x-navbar.link href="/about">About</x-navbar.link>
+                        <!-- <x-navbar.link href="/kategori/pelatihan">Pelatihan</x-navbar.link>
+                        <x-navbar.link href="/kategori/magang">Magang</x-navbar.link> -->
                     </div>
                 </div>
             </div>
@@ -88,9 +90,12 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <x-navbar.dropdown href="{{ route('home') }}">Home</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/lowongan-kerja">Lowongan Kerja</x-navbar.dropdown>
-            <x-navbar.dropdown href="/kategori/pelatihan">Pelatihan</x-navbar.dropdown>
-            <x-navbar.dropdown href="/kategori/magang">Magang</x-navbar.dropdown>
             <x-navbar.dropdown href="/kategori/informasi">Informasi</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kontak">Kontak</x-navbar.dropdown>
+            <x-navbar.dropdown href="/about">About</x-navbar.dropdown>
+            <!-- <x-navbar.dropdown href="/kategori/pelatihan">Pelatihan</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/magang">Magang</x-navbar.dropdown>
+            <x-navbar.dropdown href="/kategori/informasi">Informasi</x-navbar.dropdown> -->
         </div>
         <div class="flex items-center px-5 mb-3 text-white gap-3">
             <a href="https://www.facebook.com/groups/2288309921295419"><svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
