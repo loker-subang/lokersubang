@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
 
 <head>
-    <meta name="google-adsense-account" content="ca-pub-3504060649077932">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="icon" href="/img/lokersubang.png" sizes="32x32" type="image/png">
     <script defer src="/js/alpine.js"></script>
+
     {{-- <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script> --}}
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform" async="async"></script>
     {{-- TAG --}}
@@ -26,7 +27,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $title ?? 'LOKER SUBANG' }}" />
     <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2025 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
-    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2025, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
+    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2025, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com' }}" />
     <!-- <meta property="og:url" content="{{ url()->current() }}" /> -->
     <meta property="og:url" content="{{ URL::full() }}" />
     <meta property="og:site_name" content="LOKER SUBANG" />
@@ -47,8 +48,6 @@
     <meta name="twitter:data2" content="2 menit" />
     <!-- <link rel="canonical" href="{{ url()->current() }}"> -->
     <link rel="canonical" href="{{ URL::full() }}">
-
-
 </head>
 
 <body class="h-full">

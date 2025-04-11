@@ -22,17 +22,17 @@
                 <header class="mb-4 lg:mb-6 not-format">
                     <address class="flex items-center mb-6 not-italic">
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-                            <img class="mr-4 w-16 h-16 rounded-full" src="/img/lokersubang.png" alt="Loker Subang">
+                            <img class="mr-4 w-16 h-16 rounded-full" src="/img/lokersubang.webp" alt="Loker Subang">
                             <div>
-                                <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->user->name }}</a>
-                                <!-- <p class="text-base text-slate-900 dark:text-gray-400 mt-2">Donasi via <a href="https://saweria.co/lokersubang" class="p-1 bg-blue-700 rounded text-white hover:bg-blue-400 font-light">Saweria</a></p> -->
+                                <a href="https://www.instagram.com/ddn_nur/" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->user->name }}</a>
+                                <p class="text-base text-slate-900 dark:text-gray-400 mt-2">Donasi via <a href="https://saweria.co/lokersubang" class="p-1 bg-blue-700 rounded text-white hover:bg-blue-400 font-light">Saweria</a></p>
                                 <p class="text-base text-gray-500 dark:text-gray-400 mt-2"><time pubdate datetime="2022-02-08" title="February 8th, 2022">{{ $post->created_at->format('d M Y') }}</time></p>
                             </div>
                         </div>
                     </address>
 
 
-                    <h1 class="mb-2 mt-10 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
+                    <h1 class="mb-2 mt-10 text-3xl font-bold leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
                         {{ $post->title }}
                     </h1>
                     <nav class="flex" aria-label="Breadcrumb">
@@ -68,9 +68,37 @@
             </article>
             <hr class="bg-blue-500">
         </div>
-        <div class="sharethis-inline-share-buttons mt-16"></div>
+         <div class="sharethis-inline-share-buttons mt-16"></div> 
     </main>
 
+    <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
+  <div class="px-4 mx-auto max-w-screen-xl">
+      <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related</h2>
+      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      @foreach ($related as $data)
+                  <article class="max-w-xs">
+              <!-- <a href="{{$data->slug}}.html">
+                  <img src="/storage/{{$data->image}}" class="mb-5 rounded-lg" alt="Image 1">
+              </a> -->
+              <!-- <a href="{{$data->slug}}.html">
+        <img src="/storage/{{$data->image}}" 
+             class="mb-5 rounded-lg w-full h-48 object-cover" 
+             width="320" 
+             height="192"
+             alt="Image 1">
+    </a> -->
+              <h2 class="mb-2 text-xl font-semibold leading-tight text-gray-900 dark:text-white">
+                  <a href="{{$data->slug}}.html">{{$data->title}}</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">{{Str::words($data->description, 10, '...')}}</p>
+              <a href="{{$data->slug}}.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                  Selengkapnya..
+              </a>
+    </article>
+          @endforeach
+      </div>
+  </div>
+</aside>
 
     @if ($post->category_id == 1)
     <x-informasi />

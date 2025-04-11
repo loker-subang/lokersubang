@@ -2,10 +2,10 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
-                <div class="flex-shrink-0 flex">
+                <div class="flex-shrink-0 flex ">
                     <a href="{{ route('home') }}">
-                        <img class="w-9" src="/img/lokersubang.webp" alt="LOKER SUBANG" class="bg-white">
-                        <!-- <span class="text-white  text-2xl"> LOKER SUBANG</span> -->
+                        <img class="w-15 h-9" src="/img/logonew.png" alt="LOKER SUBANG">
+                        <!-- <span class="text-white  text-4xl font-bold"> LOKER SUBANG</span> -->
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -23,6 +23,7 @@
             </div>
             <div class="hidden md:block">
                 <div class="ml-4 flex items-center md:ml-6">
+
                     <x-navbar.link href="https://www.facebook.com/groups/2288309921295419"><svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd" />
                         </svg>
@@ -37,6 +38,7 @@
                     <x-navbar.link href="https://x.com/loker_subang"> <svg class="w-4 h-4  text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path fill="currentColor" d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z" />
                         </svg></x-navbar.link>
+
                     <!-- Profile dropdown -->
                     @auth
                     <div class="relative ml-3">

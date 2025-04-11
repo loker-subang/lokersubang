@@ -4,6 +4,7 @@ use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
 use App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
@@ -13,7 +14,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/', Controllers\HomeController::class)->name('home');
 // Show Posts
 Route::get('/{post:slug}.html', function (Post $post) {
-    return view('post', ['post' => $post]);
+    return view('post', ['post' => $post,'related' => DB::table('posts')->orderBy('id','desc')->limit(4)->get()]);
 });
 Route::get('/kategori/{category:slug}', function (Category $category) {
     $posts = $category->posts()->whereYear('created_at', '>=', 2023)->whereYear('created_at', '<=', 2025)->filter(request(['search']))->with('category', 'user')->latest()->paginate(9)->withQueryString();
