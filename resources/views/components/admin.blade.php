@@ -22,6 +22,7 @@
     <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
 
     {{-- TAG --}}
+    <meta name="robots" content="noindex">
     <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />

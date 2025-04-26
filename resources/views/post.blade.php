@@ -60,45 +60,71 @@
                             </li>
                         </ol>
                     </nav>
-
+                    <div class="m-3">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3504060649077932"
+                            crossorigin="anonymous"></script>
+                        <!-- lokersubang -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-3504060649077932"
+                            data-ad-slot="8923893625"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
                 </header>
 
                 <img src="/storage/{{ $post->image }}" alt="{{ $post->title }}" loading="lazy">
                 {!! $post->body !!}
+
+                <div class="m-3">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3504060649077932"
+                        crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-format="autorelaxed"
+                        data-ad-client="ca-pub-3504060649077932"
+                        data-ad-slot="7036096887"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
             </article>
             <hr class="bg-blue-500">
         </div>
-         <div class="sharethis-inline-share-buttons mt-16"></div> 
+        <div class="sharethis-inline-share-buttons mt-16"></div>
     </main>
 
     <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
-  <div class="px-4 mx-auto max-w-screen-xl">
-      <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related</h2>
-      <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-      @foreach ($related as $data)
-                  <article class="max-w-xs">
-              <!-- <a href="{{$data->slug}}.html">
+        <div class="px-4 mx-auto max-w-screen-xl">
+            <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">New Posts</h2>
+            <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                @foreach ($related as $data)
+                <article class="max-w-xs">
+                    <!-- <a href="{{$data->slug}}.html">
                   <img src="/storage/{{$data->image}}" class="mb-5 rounded-lg" alt="Image 1">
               </a> -->
-              <!-- <a href="{{$data->slug}}.html">
-        <img src="/storage/{{$data->image}}" 
-             class="mb-5 rounded-lg w-full h-48 object-cover" 
-             width="320" 
-             height="192"
-             alt="Image 1">
-    </a> -->
-              <h2 class="mb-2 text-xl font-semibold leading-tight text-gray-900 dark:text-white">
-                  <a href="{{$data->slug}}.html">{{$data->title}}</a>
-              </h2>
-              <p class="mb-4 text-gray-500 dark:text-gray-400">{{Str::words($data->description, 10, '...')}}</p>
-              <a href="{{$data->slug}}.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
-                  Selengkapnya..
-              </a>
-    </article>
-          @endforeach
-      </div>
-  </div>
-</aside>
+                    <a href="{{$data->slug}}.html">
+                        <img src="/storage/{{$data->image}}"
+                            class="mb-5 rounded-lg w-full h-48 object-cover"
+                            width="320"
+                            height="192"
+                            alt="Image 1">
+                    </a>
+                    <h2 class="mb-2 text-xl font-semibold leading-tight text-gray-900 dark:text-white">
+                        <a href="{{$data->slug}}.html">{{$data->title}}</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400">{{Str::words($data->description, 10, '...')}}</p>
+                    <a href="{{$data->slug}}.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                        Selengkapnya..
+                    </a>
+                </article>
+                @endforeach
+            </div>
+        </div>
+    </aside>
 
     @if ($post->category_id == 1)
     <x-informasi />
