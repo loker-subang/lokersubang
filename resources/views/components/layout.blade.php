@@ -10,11 +10,7 @@
 
 
     <title>
-        @isset($title)
-            {{ $title }}
-        @else
-            'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026'
-        @endisset
+        {{ $title ?? 'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026' }}
     </title>
 
     <meta name="description"
