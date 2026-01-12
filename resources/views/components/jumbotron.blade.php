@@ -1,5 +1,5 @@
 <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-semibold text-gray-900 dark:text-white">
+    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
         {{ $title }}
     </h2>
     <p class="font-light text-slate-800 dark:text-slate-300 sm:text-xl">Loker Subang adalah website informasi

@@ -1,55 +1,152 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Loker Subang">
-    <meta name="google-site-verification" content="2wRbchEjwMCPnEIi1wvMYevyByrlZFQzmcMY5KmSs8g" />
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="c2dVVr4w1pOldKg83soezw" async></script>
-    <title>
-        @isset($title)
-        {{ $title }}
-        @else
-        Loker Subang
-        @endisset
-    </title>
+    <meta name="google-site-verification" content="2wRbchEjwMCPnEIi1wvMYevyByrlZFQzmcMY5KmSs8g">
+
+
+    <title>{{ $title ?? 'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026' }}</title>
+
+    <meta name="description"
+        content="{{ $desc ?? 'Loker Subang 2026 - Informasi lowongan kerja terbaru di Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung. Update harian loker pabrik, swasta, dan perusahaan terpercaya.' }}">
+
+
+    <meta itemprop="name"
+        content="{{ $title ?? 'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026' }}">
+
+    <meta itemprop="description"
+        content="{{ $desc ?? 'Temukan info lowongan kerja terupdate di Subang dan sekitarnya. Loker pabrik, swasta, perusahaan terbaik dengan gaji kompetitif 2026.' }}">
+
+    <meta itemprop="image"
+        content="{{ isset($image) ? asset('storage/'.$image) : asset('img/logo.webp') }}">
+
+    {{-- ================= OPEN GRAPH ================= --}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title"
+        content="{{ $title ?? 'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026' }}">
+    <meta property="og:description"
+        content="{{ $desc ?? 'Temukan info lowongan kerja terupdate di Subang dan sekitarnya. Loker pabrik dan swasta terpercaya 2026.' }}">
+    <meta property="og:image"
+        content="{{ isset($image) ? asset('storage/'.$image) : asset('img/logo.webp') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ $title ?? 'Loker Subang 2026' }}">
+    <meta property="og:site_name" content="Loker Subang">
+    <meta property="og:locale" content="id_ID">
+
+    {{-- ================= TWITTER ================= --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title"
+        content="{{ $title ?? 'Loker Subang - Lowongan Kerja Subang & Sekitarnya Terupdate 2026' }}">
+    <meta name="twitter:description"
+        content="{{ $desc ?? 'Info loker terupdate Subang dan sekitarnya. Update harian lowongan kerja terpercaya 2026.' }}">
+    <meta name="twitter:image"
+        content="{{ isset($image) ? asset('storage/'.$image) : asset('img/logo.webp') }}">
+    <meta name="twitter:site" content="@lokersubang">
+    <meta name="twitter:creator" content="@lokersubang">
+
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/lokersubang.webp" sizes="32x32" type="image/webp">
+    <link rel="apple-touch-icon" href="/img/lokersubang.webp">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="{{ asset('resources/css/app.css') }}" as="style">
+    <link rel="preload" href="https://rsms.me/inter/inter.css" as="style">
+    <link rel="preload" href="{{ asset('js/alpine.js') }}" as="script">
+
+    <!-- CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="icon" href="/img/lokersubang.png" sizes="32x32" type="image/png">
-    <script defer src="/js/alpine.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3504060649077932"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform" async="async"></script>
-    {{-- TAG --}} 
-    <meta name="robots" content="index, follow"/>
-    <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2025 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
-    <meta property="og:locale" content="id_ID" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ $title ?? 'LOKER SUBANG' }}" />
-    <meta property="og:description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2025 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
-    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2025, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com' }}" />
-    <meta property="og:url" content="{{ URL::full() }}" />
-    <meta property="og:site_name" content="LOKER SUBANG" />
-    <meta property="og:image" content="@isset($image){{ asset('storage/' . $image) }}@else{{ asset('/img/logo.png') }}@endisset" />
-    <meta property="og:image:width" content="1080" />
-    <meta property="og:image:height" content="1080" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:label1" content="Ditulis oleh" />
-    <meta name="twitter:data1" content="Loker Subang" />
-    <meta name="twitter:label2" content="Estimasi waktu membaca" />
-    <meta name="twitter:data2" content="2 menit" />
-    <link rel="canonical" href="{{ URL::full() }}">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin="anonymous">
+
+    <!-- Structured Data for Better Rich Snippets -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Loker Subang",
+            "url": "{{ URL::to('/') }}",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "{{ URL::to('/search?q={search_term}') }}",
+                "query-input": "required name=search_term"
+            },
+            "description": "Informasi lowongan kerja terbaru di Subang dan sekitarnya",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Loker Subang",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ asset('/img/logo.webp') }}",
+                    "width": "600",
+                    "height": "60"
+                }
+            }
+        }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Beranda",
+                    "item": "{{ URL::to('/') }}"
+                }
+                @isset($breadcrumbs), {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "{{ $breadcrumbs['name'] }}",
+                    "item": "{{ URL::to($breadcrumbs['url']) }}"
+                }
+                @endisset
+            ]
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWH4W0VJ95"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-PWH4W0VJ95');
+    </script>
+
+    <!-- Dark Mode Script -->
     <script>
         // Cek preferensi dark mode user
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
         } else {
             document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
         }
     </script>
+
+    <!-- Defer Non-Critical Scripts -->
+    <script defer src="/js/alpine.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3504060649077932" crossorigin="anonymous"></script>
+    <script defer src="https://platform-api.sharethis.com/js/sharethis.js#property=65de7486b17a2e001a12db11&product=inline-share-buttons&source=platform"></script>
 </head>
 
 <body class="h-full bg-gray-100 dark:bg-gray-900">
@@ -88,4 +185,5 @@
         }
     </script>
 </body>
+
 </html>

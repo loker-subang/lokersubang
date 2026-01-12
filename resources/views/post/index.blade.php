@@ -1,7 +1,7 @@
 <x-admin title="Post">
     <x-slot name="header">Posts</x-slot>
 
-    <x-table.button><a href="{{ route('post.create') }}"> New Post</a></x-table.button>
+    <a href="{{ route('post.create') }}"> <x-table.button> New Post</x-table.button></a>
     <form action="" class="mt-5">
         <div class="items-center mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
             <div class="relative w-full">

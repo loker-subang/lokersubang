@@ -32,7 +32,7 @@
                     </address>
 
 
-                    <h1 class="mb-2 mt-10 text-3xl font-bold leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
+                    <h1 class="mb-2 mt-10 text-3xl font-bold tracking-tight leading-tight text-gray-900 lg:mb-3 lg:text-4xl dark:text-white">
                         {{ $post->title }}
                     </h1>
                     <nav class="flex" aria-label="Breadcrumb">
@@ -82,11 +82,13 @@
                 <div class="m-3">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3504060649077932"
                         crossorigin="anonymous"></script>
+                    <!-- lokersubang -->
                     <ins class="adsbygoogle"
                         style="display:block"
-                        data-ad-format="autorelaxed"
                         data-ad-client="ca-pub-3504060649077932"
-                        data-ad-slot="7036096887"></ins>
+                        data-ad-slot="8923893625"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
@@ -138,7 +140,7 @@
             "description": "{{ $post->body }}",
             "url": "https://lokersubang.com/{{ $post->slug }}.html",
             "datePosted": "{{ $post->created_at->tz('UTC')->toAtomString()}}",
-            "validThrough": "2025-03-18T00:00",
+            "validThrough": "2026-03-18T00:00",
             "employmentType": "FULL_TIME",
             "hiringOrganization": {
                 "@type": "Organization",

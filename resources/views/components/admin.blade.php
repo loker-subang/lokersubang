@@ -23,12 +23,12 @@
 
     {{-- TAG --}}
     <meta name="robots" content="noindex">
-    <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
+    <meta name="description" content="{{ $desc ?? 'Loker Subang adalah website Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2026 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}">
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $title ?? 'LOKER SUBANG' }}" />
-    <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2024 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
-    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2024, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
+    <meta property="og:description" content="{{ $desc ?? 'Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang 2026 terbaru dan terupdate setiap hari Daerah Subang, Purwakarta, Karawang, Majalengka, Indramayu, Cikarang, Bekasi dan Bandung' }}" />
+    <meta name="keywords" content="{{ $keyword ?? 'loker subang 2026, lokersubang, loker subang, loker terbaru, lowongan kerja subang, loker hari ini, info loker subang, loker pabrik subang, loker subang com, loker subang id' }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
     {{-- <meta property="og:url" content="{{ URL::full() }}" /> --}}
     <meta property="og:site_name" content="LOKER SUBANG" />

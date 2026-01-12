@@ -1,4 +1,4 @@
-<article class="p-6 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+<article class="p-6 bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
     <div class="flex justify-between items-center mb-5 text-gray-500">
         <a href="/kategori/{{ $slugCategory }}">
             <span class="bg-{{ $color }}-100 text-primary-800 text-xs font-small inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
@@ -12,13 +12,13 @@
     </div>
     <!-- <h2 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"><a href="/{{ $slug }}.html">{{ $title }}</a></h2> -->
 
-    <h2 class="mb-4 text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><a href="/{{ $slug }}.html">{{ $title }}</a></h2>
+    <h2 class="mb-4 text-xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white"><a href="/{{ $slug }}.html">{{ $title }}</a></h2>
     <!-- <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{{ $description }}</p> -->
     <p class="mb-5 font-light text-sm text-gray-500 dark:text-gray-400">{{ \Illuminate\Support\Str::words($description, 13,'...') }}</p>
     <div class="flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <img class="w-5 h-5 rounded-full" src="/img/lokersubang.webp" alt="Loker Subang" />
-            <span class="font-normal text-sm dark:text-white">
+            <span class="font-normal text-sm text-slate-900 dark:text-white">
                 {{ $author }}
             </span>
         </div>
