@@ -74,7 +74,7 @@
     }
     </script>
 
-    <section class="dark:bg-gray-900 antialiased" itemscope itemtype="http://schema.org/ItemList">
+    <section class="dark:bg-gray-900 antialiased">
         <div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
             <x-jumbotron title="{{ $title ?? 'LOKER SUBANG' }}" />
 
